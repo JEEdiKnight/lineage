@@ -177,7 +177,7 @@ function start() {
             .style('top', d.y - 20)
             .style('left', d.x + 20);
 
-          d3.select('#name').html(d.name + "<br><span class='birthYear'>" + d.birthYear + "</span>");
+          d3.select('#name').html("<img src='" + d.image + "' style='max-height:200px;max-width:200px;' /><br>" + d.name + "<br><span class='birthYear'>" + d.birthYear + "</span>");
         })
         .on("mouseout", function(d) {
           d3.select(this).transition().duration(100).attr('r', 5);
